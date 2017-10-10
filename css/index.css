@@ -118,6 +118,7 @@ header .content img{
 	display: block;
 	margin:0 auto;
 	padding-top: 100px;
+	cursor: pointer;
 
 	/*width: 0px;*/
 	/*height: 0px;*/
@@ -280,7 +281,6 @@ header .content img{
 .works_box .tab{
 	width: 1070px;
 	height: 465px;
-	/*background: pink;*/
 	margin: 10px auto 0;
 	font-family: "Arial";
 }
@@ -292,6 +292,10 @@ header .content img{
 	/*background: red;*/
 	margin: 0 auto;
 	cursor: pointer;
+}
+
+.works_box .tab .anniu_box .one{
+	background-color: #4EB2D6;
 }
 
 .works_box .tab .anniu_box .anniu{

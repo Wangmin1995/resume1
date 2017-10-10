@@ -20,12 +20,85 @@ $(function(){
 			"background":"#4EB2D6"
 		})
 
-
 	})
+
+
+
 
 
 	$(".backtop").backTop();
 	//$(".backtop") 返回按钮父容器 
+
+
+
+
+
+	// 点击滑动到某个板块
+	$("header .content img").click(function () {
+		// 滑动板块的距离
+        $({dNum:0}).animate({dNum:752},{ 
+        	// 滑动的时间
+            duration:1000,
+            step: function () {
+                $(window).scrollTop(this.dNum);
+            }
+        })
+    });
+
+
+
+
+
+	// 导航滑动效果
+    $("nav .nav li:eq(0)").click(function () {
+        $({num:$(window).scrollTop()}).animate({num:0},{ 
+            duration:1000,
+            step: function () {
+                $(window).scrollTop(this.num);
+            }
+        })
+    });
+
+    $("nav .nav li:eq(1)").click(function () {
+        $({num:$(window).scrollTop()}).animate({num:752},{ 
+            duration:1000,
+            step: function () {
+                $(window).scrollTop(this.num);
+            }
+        })
+    });
+
+    $("nav .nav li:eq(2)").click(function () {
+        $({num:$(window).scrollTop()}).animate({num:1350},{ 
+            duration:1000,
+            step: function () {
+                $(window).scrollTop(this.num);
+            }
+        })
+    });
+
+    $("nav .nav li:eq(3)").click(function () {
+        $({num:$(window).scrollTop()}).animate({num:2077},{ 
+            duration:1000,
+            step: function () {
+                $(window).scrollTop(this.num);
+            }
+        })
+    });
+
+    $("nav .nav li:eq(4)").click(function () {
+        $({num:$(window).scrollTop()}).animate({num:3600},{ 
+            duration:1000,
+            step: function () {
+                $(window).scrollTop(this.num);
+            }
+        })
+    });
+
+
+
+
+
 
 
 })
