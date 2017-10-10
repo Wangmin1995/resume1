@@ -1,0 +1,616 @@
+body{
+	/*height: 3000px;*/
+	background-image: url(../images/1.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100%;
+	background-position: 0 -100px;
+}
+
+header nav{
+	width: 100%;
+	height: 50px;
+	background:rgba(0,0,0,0.7);
+	position: fixed;
+	/*将导航放置顶最高层 定位元素的第五属性top/bottom/right/left/z*/
+	z-index: 9;
+}
+
+header nav .title{
+	width: 1200px;
+	height: 50px;
+	/*background-color: red;*/
+	margin: 0 auto;
+} 
+
+header nav .title .logo{
+	width: 100px;
+	height: 50px;
+	/*background-color: blue;*/
+	float: left;
+}
+
+header nav .title .nav{
+	width: 500px;
+	height: 50px;
+	/*background-color: green;*/
+	float: right;
+	cursor: pointer;
+}
+
+header nav .title .logo b{
+	font-family: "Arial";
+	color: white;
+	font-size: 24px;
+	line-height: 50px;
+}
+
+header nav .title .nav ul li{
+	width: 100px;
+	height: 50px;
+	/*background: #4EB2D6;*/
+	float: left;
+	color: #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;
+	transition:background 1s;
+	font-family: "Arial";
+}
+
+header nav .title ul li:hover{
+	background: #4EB2D6;
+}
+
+
+header .content{
+	width: 100%;
+	height: 800px;
+	background: rgba(0,0,0,0.5);
+	border-top: 1px solid black; /*margin-top的BUG 在父元素加上边框*/
+}
+
+header .content p{
+	width: 1100px;
+	margin: 240px auto 0;
+	/*background: red;*/
+	color: white;
+	font-size: 32px;
+	line-height: 1.6em;
+	text-align: center;
+	font-family: "微软雅黑"；
+}
+
+header .content .p2{
+	width: 1100px;
+	margin: 10px auto 0;
+	/*background: red;*/
+	color: white;
+	font-size: 26px;
+	line-height: 1.6em;
+	text-align: center;
+	font-family: "Arial"；
+}
+
+header .content .btu{
+	width: 245px;
+	height: 62px;
+	border: 1px solid white;
+	margin: 50px auto 0;
+	color: white;
+	font-size: 36px;
+	text-align: center;
+	line-height: 60px;
+	border-radius: 15px; /*圆角矩形角的半径*/
+	cursor: pointer; /*鼠标样式*/
+	transition:background 1s;
+	font-family: "Arial";
+
+}
+
+header .content .btu:hover{
+	background: #4EB2D6;
+}
+
+/*制作三角形*/
+header .content img{
+	display: block;
+	margin:0 auto;
+	padding-top: 100px;
+
+	/*width: 0px;*/
+	/*height: 0px;*/
+	/*margin: 20px auto 0;*/
+	/*border-top: 40px solid white; */
+	/*border-bottom: 0;   /*1、 下边是0像素 */
+	/*border-left: 40px solid transparent;    /*2、左右40像素是透明的*/
+/*	border-right:  40px solid transparent;*/   /*3、 所以成为倒三角*/
+
+	animation:move 1s infinite; /*动画规则 适用于任何动画*/
+}
+
+/*动画路径*/
+@keyframes move{
+	0%{margin-top: 20px;}
+	50%{margin-top: 60px;}
+	100%{margin-top: 20px;}
+}
+
+
+/*第二大块*/
+	/*skill*/
+.skill_box{
+	width: 100%;
+	background: rgba(60,70,80,0.7);
+	padding-top: 100px;/*margin-top的BUG 在父元素加上内间距*/
+	padding-bottom: 100px;
+}
+
+.skill_box h3{
+	/*background: red;*/
+	width: 638px;
+	height: 40px;
+	border-bottom: 2px solid white;
+	margin: 0 auto;
+	color: #fff;
+	text-align: center;
+	line-height: 40px;
+	font-size: 36px;
+	padding-bottom: 20px;
+	font-family: "Arial";
+}
+
+.skill_box p{
+	width: 1100px;
+	margin: 20px auto 0;
+	color: white;
+	font-size: 18px;
+	text-align: center;
+	line-height: 1.6em;
+	font-family: "微软雅黑"；
+}
+
+.skill_box ul{
+	width: 1100px;
+	margin: 20px auto 0;
+	overflow: hidden; /*溢出隐藏*/
+}
+
+.skill_box ul li{
+	width: 154px;
+	height: 195px;
+	/*background: red;*/
+	float: left; /*浮动撑不开父元素 在父元素加溢出隐藏/或直接定死父元素*/
+	margin-right: 35px;
+	text-align: center;
+	font-size: 22px;
+	color: white;
+	font-family: "Arial";
+}
+
+.skill_box ul li span{
+	display: block;
+	padding-top: 15px;
+	font-family: "Arial";
+}
+
+.skill_box ul .right{
+	margin-right: 0px;
+}
+
+.skill_box ul li div{
+	width: 120px;
+	height: 120px;
+	border: 15px solid #2F353D;
+	border-radius: 50%; /*圆形*/
+	margin: 0 auto;
+	color: white;
+	font-size: 40px;
+	text-align: center;
+	line-height: 120px;
+}
+ 
+ .skill_box ul li div i{
+	font-size: 20px;
+ }
+
+.skill_box ul li div:hover{
+	transition:transform 1s;
+	transform:rotateY(360deg);
+}
+
+ 	/*填色*/
+.skill_box ul li:nth-child(1) div{
+	background: #7483BC;
+}
+
+.skill_box ul li:nth-child(2) div{
+	background: #F66E30;
+}
+
+.skill_box ul li:nth-child(3) div{
+	background: #EDC516;
+}
+
+.skill_box ul li:nth-child(4) div{
+	background: #A3F6E2;
+}
+
+.skill_box ul li:nth-child(5) div{
+	background: #CAC9D1;
+}
+
+.skill_box ul li:nth-child(6) div{
+	background: #E9B4C8;
+}
+
+	/*wokrs*/
+.works_box{
+	width: 100%;
+	background: rgba(0,0,0,0.5);
+	padding-top: 100px;/*margin-top的BUG 在父元素加上内间距*/
+	padding-bottom: 60px;
+}
+
+.works_box h3{
+	/*background: red;*/
+	width: 638px;
+	height: 40px;
+	border-bottom: 2px solid white;
+	margin: 0 auto;
+	color: #fff;
+	text-align: center;
+	line-height: 40px;
+	font-size: 36px;
+	padding-bottom: 20px;
+	font-family: "Arial";
+}
+
+.works_box p{
+	width: 1100px;
+	margin: 20px auto 0;
+	color: white;
+	font-size: 18px;
+	text-align: center;
+	line-height: 1.6em;
+	font-family: "微软雅黑"；
+}
+
+.works_box .tab{
+	width: 1070px;
+	height: 465px;
+	/*background: pink;*/
+	margin: 10px auto 0;
+	font-family: "Arial";
+}
+
+  /*选项卡*/
+.works_box .tab .anniu_box{
+	width: 430px;
+	height: 40px;
+	/*background: red;*/
+	margin: 0 auto;
+	cursor: pointer;
+}
+
+.works_box .tab .anniu_box .anniu{
+	width: 100px;
+	height: 38px;
+	border: 1px solid white;
+	color: white;
+	text-align: center;
+	line-height: 36px;
+	font-size: 20px;
+	border-radius: 4px;
+	float: left;
+	margin-right: 5px;
+}
+
+.works_box .tab .anniu_box .anniu:nth-child(4){
+	margin-right: 0;
+}
+
+.works_box .tab .content_box{
+	width: 1070px;
+	height: 400px;
+	/*background: red;*/
+	margin-top: 25px;
+}
+
+  /*作品列表*/
+.works_box .tab .content_box ul{
+	width: 1070px;
+	height: 400px;
+	/*background: green;*/
+}
+
+.works_box .tab .content_box ul:nth-child(2){
+	display: none;
+}
+
+.works_box .tab .content_box ul:nth-child(3){
+	display: none;
+}
+
+.works_box .tab .content_box ul:nth-child(4){
+	display: none;
+}
+
+.works_box .tab .content_box ul li{
+	width: 260px;
+	height: 195px;
+	background: black;
+	float: left;
+	overflow: hidden;
+}
+
+.works_box .tab .content_box ul li:nth-child(1){
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.works_box .tab .content_box ul li:nth-child(2){
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.works_box .tab .content_box ul li:nth-child(3){
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.works_box .tab .content_box ul li:nth-child(4){
+	margin-bottom: 10px;
+}
+
+.works_box .tab .content_box ul li:nth-child(5){
+	margin-right: 10px;
+}
+
+.works_box .tab .content_box ul li:nth-child(6){
+	margin-right: 10px;
+}
+
+.works_box .tab .content_box ul li:nth-child(7){
+	margin-right: 10px;
+}
+
+.works_box .tab .content_box ul li img{
+	transition:transform 1s;
+}
+
+.works_box .tab .content_box ul li img:hover{
+	transform:scale(1.2);/*缩放  倍数*/
+}
+
+
+	/*about*/
+.about_box {
+	width: 100%;
+	background: #2C3138;
+}
+
+.about_box .line{
+	width: 100%;
+	overflow: hidden;
+}
+
+.about_box .line .content1{
+	width: 45%;
+	position: relative;
+	float: left;
+	font-size: 0;
+}
+
+.about_box .line .content1 img{
+	width: 100%;
+}
+
+.about_box .line .content1 .mask{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 40px;
+	color: white;
+	text-align: center;
+	/*font-weight: bold;*/
+}
+
+.about_box .line .content1 .mask .p1{
+	width: 25%;
+	margin: 180px auto 0;
+	font-family: "微软雅黑";
+}
+
+.about_box .line .content2{
+	width: 55%;
+	float: left;
+}
+
+.about_box .line .content2 .graduation{
+	width: 65%;
+	color: white;
+	margin-top: 170px;
+	margin-left: 55px;
+}
+
+.about_box .line .content2 .graduation h3{
+	font-size: 30px;
+	font-family: "Arial";
+}
+
+.about_box .line .content2 .graduation p{
+	font-size: 18px;
+	line-height: 1.8em;
+	margin-top: 35px;
+	font-family: "Arial";
+}
+
+.about_box .line .content3{
+	width: 45%;
+	float: left;
+}
+
+.about_box .line .content3 .graduation{
+	width: 65%;
+	color: white;
+	margin-top: 210px;
+	margin-left: 195px;
+	text-align: right;
+}
+
+.about_box .line .content3 .graduation h3{
+	font-size: 30px;
+	font-family: "Arial";
+}
+
+.about_box .line .content3 .graduation p{
+	font-size: 18px;
+	line-height: 1.8em;
+	margin-top: 35px;
+	font-family: "Arial";
+}
+
+.about_box .line .content4{
+	width: 55%;
+	position: relative;
+	float: left;
+	font-size: 0;
+}
+
+.about_box .line .content4 img{
+	width: 100%;
+}
+
+.about_box .line .content4 .mask{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 40px;
+	color: white;
+	text-align: center;
+	/*font-weight: bold;*/
+}
+
+.about_box .line .content4 .mask .p1{
+	width: 25%;
+	margin: 250px auto 0;
+	font-family: "微软雅黑";
+}
+
+.about_box .line .content5{
+	width: 45%;
+	position: relative;
+	float: left;
+	font-size: 0;
+}
+
+.about_box .line .content5 img{
+	width: 100%;
+}
+
+.about_box .line .content5 .mask{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 40px;
+	color: white;
+	text-align: center;
+	/*font-weight: bold;*/
+}
+
+.about_box .line .content5 .mask .p1{
+	width: 25%;
+	margin: 200px auto 0;
+	font-family: "微软雅黑";
+}
+
+.about_box .line .content6{
+	width: 55%;
+	float: left;
+}
+
+.about_box .line .content6 .graduation{
+	width: 65%;
+	color: white;
+	margin-top: 170px;
+	margin-left: 55px;
+}
+
+.about_box .line .content6 .graduation h3{
+	font-size: 30px;
+	font-family: "Arial";
+}
+
+.about_box .line .content6 .graduation p{
+	font-size: 18px;
+	line-height: 1.8em;
+	margin-top: 35px;
+	font-family: "Arial";
+}
+
+
+/*页底*/
+footer{
+	width: 100%;
+	height: 30px 0;
+}
+
+footer h3{
+	width: 638px;
+	height: 100px;
+	/*background:red;*/
+	margin: 40px auto 0;
+}
+
+footer h3 span{
+	float: left;
+	width: 210px;
+	border-bottom: 1px solid white;
+}
+
+footer h3 .line_through{
+	margin-top: 45px;
+}
+
+footer h3 .title{
+	margin-top: 20px;
+	font-size: 36px;
+	color: white;
+	text-align: center;
+	border: 0;
+}
+
+/*返回顶部*/
+.backtop{
+	position: fixed;
+	right: 100px;
+	bottom: 100px;
+}
+
+footer .footer_box{
+	width: 100%;
+	background-color: rgba(0,0,0,0.8);
+	padding-top: 20px;
+}
+
+footer .footer_box .di_box{
+	width: 100%;
+	height: 58px;
+	background-color: rgba(0,0,0,0.8);
+}
+
+footer .footer_box img{
+	display: block;
+	margin: 0 auto;	
+}
